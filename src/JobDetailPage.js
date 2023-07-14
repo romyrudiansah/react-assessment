@@ -31,7 +31,7 @@ const JobDetailPage = () => {
   return (
     <div>
       <section className="pt-28 lg:pt-44 pb-28 bg-violet-500 bg-center bg-cover relative">
-        <div className="container mx-auto">
+        <div className="container mx-auto my-4 px-4 lg:px-0">
           <div className="grid">
             <div className="col-span-12">
               <div className="text-center text-white">
@@ -50,7 +50,7 @@ const JobDetailPage = () => {
           </div>
         </div>
       </section>
-      <section className="container mx-auto">
+      <section className="container mx-auto my-4 px-4 lg:px-0">
         <div className="border-gray-100/30 m-10">
           <div className="relative mb-5">
             <h3 className="mb-1 text-lg font-bold text-gray-900">{job.title}</h3>

@@ -65,7 +65,7 @@ const JobListPage = () => {
   return (
     <div>
       <section className="pt-28 lg:pt-44 pb-28 bg-violet-500 bg-center bg-cover relative">
-        <div className="container mx-auto">
+        <div className="container mx-auto my-4 px-4 lg:px-0">
           <div className="grid">
             <div className="col-span-12">
               <div className="text-center text-white">
@@ -84,23 +84,23 @@ const JobListPage = () => {
         </div>
       </section>
       <section className="search-job">
-        <div className="container mx-auto my-4">
-          <div className="flex items-center border-b border-b-2 border-teal-500 py-2">
+        <div className="container mx-auto my-4 px-4 lg:px-0">
+          <div className="flex flex-col md:flex-row items-center border-b border-b-2 border-teal-500 py-2">
             <input
-              className="appearance-none border border-blue-500 rounded bg-transparent w-2/4 text-gray-700 mr-3 p-4 leading-tight focus:outline-none"
+              className="appearance-none border border-blue-500 rounded bg-transparent w-full md:w-2/4 text-gray-700 mb-2 md:mr-3 md:mb-0 p-4 leading-tight focus:outline-none"
               type="text"
               placeholder="Job Description"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
             />
             <input
-              className="appearance-none border border-blue-500 rounded bg-transparent w-2/4 text-gray-700 mr-3 p-4 leading-tight focus:outline-none"
+              className="appearance-none border border-blue-500 rounded bg-transparent w-full md:w-2/4 text-gray-700 mb-2 md:mr-3 md:mb-0 p-4 leading-tight focus:outline-none"
               type="text"
               placeholder="Location"
               value={location}
               onChange={(e) => setLocation(e.target.value)}
             />
-            <label className="flex w-1/4 items-center">
+            <label className="flex w-full md:w-1/4 items-center">
               <input
                 className="mr-1"
                 type="checkbox"
@@ -110,16 +110,17 @@ const JobListPage = () => {
               <span className="text-sm">Full Time Only</span>
             </label>
             <button
-              className="bg-blue-500 w-1/4 hover:bg-blue-700 text-white font-bold p-4 ml-2 rounded focus:outline-none"
+              className="bg-blue-500 w-full md:w-1/4 hover:bg-blue-700 text-white font-bold p-4 mt-2 md:mt-0 ml-0 md:ml-2 rounded focus:outline-none"
               type="submit"
               onClick={handleSearch}
             >
               Search
             </button>
           </div>
+
         </div>
       </section>
-      <section className="container mx-auto">
+      <section className="container mx-auto my-4 px-4 lg:px-0">
         {jobs.map((job) => (
           <div className="relative overflow-hidden transition-all duration-500 ease-in-out bg-white border rounded-md border-gray-100 hover:border-violet-500 hover:-translate-y-2 my-5" key={job.id}>
             <div className="p-6">
@@ -156,8 +157,8 @@ const JobListPage = () => {
                     <li><Link className="primary-link text-muted">Lorem ipsum sit dolor</Link></li>
                   </ul>
                 </div>
-                <div className="col-span-12 mt-2 lg:col-span-6 lg:mt-0">
-                  <div className="text-right text-black">
+                <div className="col-span-12 mt-5 sm:mt-2 lg:col-span-6 lg:mt-0">
+                  <div className="text-center sm:text-right text-black">
                     <Link className="btn-item auction-btn mr-2" to={`/job-detail/${job.id}`}>
                       Details
                     </Link>

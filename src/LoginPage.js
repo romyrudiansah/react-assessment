@@ -21,7 +21,7 @@ const LoginPage = () => {
 
   return (
     <div className="bg-purple-500 bg-opacity-10 flex items-center justify-center h-screen">
-      <div className="bg-[#6a4cc6] shadow-lg rounded p-12 w-full max-w-md">
+      <div className="bg-[#6a4cc6] shadow-lg rounded p-12 w-full max-w-md sm:mx-4">
         <div class="text-center">
           <h5 class="text-[18.5px] font-bold text-white">Welcome Back !</h5>
           <p class="mt-3 text-white/80">Sign in to continue to JobSearch.</p>
